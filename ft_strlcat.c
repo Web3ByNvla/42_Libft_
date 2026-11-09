@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: novella <novella@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/08 20:47:38 by novella           #+#    #+#             */
-/*   Updated: 2026/11/08 21:13:35 by novella          ###   ########lyon.fr   */
+/*   Updated: 2026/11/09 08:25:07 by gunovell         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-    size_t	dst_len;
-    size_t	src_len;
-    size_t	i;
-
-    dst_len = 0;
-    while (dst_len < size && dst[dst_len] != '\0')
-        dst_len++;
-    src_len = ft_strlen(src);
-    if (dst_len == size)
-        return (size + src_len);
-    i = 0;
-    while (src[i] != '\0' && i < size - dst_len - 1)
-    {
-        dst[dst_len + i] = src[i];
-        i++;
-    }
-    dst[dst_len + i] = '\0';
-    return (dst_len + src_len);
+	size_t	dst_len;
+	size_t	src_len;
+	size_t	i;
+	
+	dst_len = 0;
+	while (dst_len < size && dst[dst_len] != '\0')
+		dst_len++;
+	src_len = ft_strlen(src);
+	if (dst_len == size)
+		return (size + src_len);
+		i = 0;
+	while (src[i] != '\0' && i < size - dst_len - 1)
+	{
+		dst[dst_len + i] = src[i];
+		i++;
+	}
+	dst[dst_len + i] = '\0';
+	return (dst_len + src_len);
 }
