@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: novella <novella@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 15:54:47 by gunovell          #+#    #+#             */
-/*   Updated: 2026/11/06 16:08:51 by gunovell         ###   ########lyon.fr   */
+/*   Updated: 2026/11/07 13:15:11 by novella          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlen(const char *str)
 
 	while (str[i])
 	{
-		i++; 
+		i++;
 	}
 	return (i);
 }
