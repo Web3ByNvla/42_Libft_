@@ -6,53 +6,48 @@
 /*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 08:33:51 by gunovell          #+#    #+#             */
-/*   Updated: 2026/11/10 09:06:25 by gunovell         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 11:40:55 by gunovell         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include "stdlib.h"
+#include "libft.h"
+
+static int	is_charset(char c, const char *charset)
+{
+	int		i;
+
+	i = 0;
+	while (charset[i])
+	{
+		if (charset[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
+}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*str1;
 	char	*buffer;
-	size_t	i;
-	size		y;
-	int		len;
+	int		start;
+	int		end;
 	
-	str1 = (char *) s1;
-	buffer = malloc((ft_strlen(s1) - ft_strlen(set) + 1) * sizeof(char));
-	len = ft_strlen(s1);
-	if (!buffer)
+	if (!s1 || !set)
 		return (NULL);
-	
-	while (i < len)
-	{
-		y = 0;
-		if (set[y] == s1[i])
-		{
-			if ()
-			while (set[y] != str1[i])
-			{
-				str1[i] = buffer[i];
-			}
-			
-		}
-		i++;
-	}
-	i = 0;
-	y = 0;
-	while (i < len - ft_strlen(set))
-	{
-		while (str1[i] != '\0')
-		{
-			buffer[y] = str1[i];
-			y++;
-			i++;
-		}
-		i++;
-	}
-	buffer[y] = '\0';
+	start = 0;
+	end = ft_strlen(s1) - 1;
+	while (is_charset(s1[start], set) && s1[start] != '\0')
+		start++;
+	while(is_charset(s1[end], set) && end >= 0)
+		end--;
+	buffer = ft_substr(s1, start, end - start + 1);
 	return (buffer);
+}
+
+int	main()
+{
+	char *buffer = ft_strtrim("..***p", ".**");
+	printf("%s",buffer);
+	free(buffer);
+	return (0);
 }
