@@ -6,7 +6,7 @@
 /*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 10:31:31 by gunovell          #+#    #+#             */
-/*   Updated: 2026/11/09 14:12:46 by gunovell         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 09:08:56 by gunovell         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	while (big[i] && i < len)
 	{
 		y = i + 1;
-		while(little[y])
+		while (little[y])
 		{
 			if (little[y] == big[i])
-				return (big[i]);
+				return (&big[i]);
 			y++;
 		}
 		i++;
