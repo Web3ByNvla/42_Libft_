@@ -6,7 +6,7 @@
 /*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 08:33:51 by gunovell          #+#    #+#             */
-/*   Updated: 2026/11/10 11:40:55 by gunovell         ###   ########lyon.fr   */
+/*   Updated: 2026/11/11 10:44:59 by gunovell         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	buffer = ft_substr(s1, start, end - start + 1);
 	return (buffer);
-}
-
-int	main()
-{
-	char *buffer = ft_strtrim("..***p", ".**");
-	printf("%s",buffer);
-	free(buffer);
-	return (0);
 }
