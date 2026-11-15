@@ -31,14 +31,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*buffer;
 	int		start;
 	int		end;
-	
+
 	if (!s1 || !set)
 		return (NULL);
 	start = 0;
 	end = ft_strlen(s1) - 1;
 	while (is_charset(s1[start], set) && s1[start] != '\0')
 		start++;
-	while(is_charset(s1[end], set) && end >= 0)
+	while (end >= 0 && is_charset(s1[end], set))
 		end--;
 	buffer = ft_substr(s1, start, end - start + 1);
 	return (buffer);

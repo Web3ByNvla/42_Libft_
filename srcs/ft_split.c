@@ -12,11 +12,6 @@
 
 #include "libft.h"
 
-static int	is_delim(char c, char delim)
-{
-	return (c == delim);
-}
-
 static size_t	count_words(const char *s, char c)
 {
 	size_t	count;
@@ -26,12 +21,12 @@ static size_t	count_words(const char *s, char c)
 	in_word = 0;
 	while (*s)
 	{
-		if (!is_delim(*s, c) && !in_word)
+		if (*s != c && !in_word)
 		{
 			count++;
 			in_word = 1;
 		}
-		else if (is_delim(*s, c))
+		else if (*s == c)
 			in_word = 0;
 		s++;
 	}
@@ -56,38 +51,48 @@ static char	*dup_word(const char *start, size_t len)
 	return (word);
 }
 
-char	**ft_split(char const *s, char c)
+static int	fill_words(char **result, const char *s, char c)
 {
-	char	**result;
 	size_t	index;
 	size_t	word_len;
 
-	if (!s)
-		return (NULL);
-	result = malloc((count_words(s, c) + 1) * sizeof(char *));
-	if (!result)
-		return (NULL);
 	index = 0;
 	while (*s)
 	{
-		while (*s && is_delim(*s, c))
+		while (*s && *s == c)
 			s++;
 		if (!*s)
 			break ;
 		word_len = 0;
-		while (s[word_len] && !is_delim(s[word_len], c))
+		while (s[word_len] && s[word_len] != c)
 			word_len++;
 		result[index] = dup_word(s, word_len);
 		if (!result[index])
 		{
 			while (index > 0)
 				free(result[--index]);
-			free(result);
-			return (NULL);
+			return (0);
 		}
 		s += word_len;
 		index++;
 	}
 	result[index] = NULL;
+	return (1);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**result;
+
+	if (!s)
+		return (NULL);
+	result = malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!result)
+		return (NULL);
+	if (!fill_words(result, s, c))
+	{
+		free(result);
+		return (NULL);
+	}
 	return (result);
 }

@@ -3,23 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: novella <novella@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 15:42:53 by gunovell          #+#    #+#             */
-/*   Updated: 2026/11/11 10:24:40 by gunovell         ###   ########lyon.fr   */
+/*   Updated: 2026/11/15 20:32:35 by novella          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static void	ft_swap(char *a, char *b)
-{
-	char	*tmp;
-
-	*tmp = *a;
-	*a = *b;
-	*b = *tmp;
-}
 
 static int	long_len(long nbr)
 {
@@ -52,6 +43,8 @@ char	*ft_itoa(int n)
 		return (NULL);
 	buffer[len] = '\0';
 	len--;
+	if (nbr == 0)
+		buffer[0] = '0';
 	if (nbr < 0)
 	{
 		buffer[0] = '-';
@@ -60,7 +53,6 @@ char	*ft_itoa(int n)
 	while (len > 0)
 	{
 		buffer[len] = (nbr % 10) + '0';
-		printf("%s\n", &buffer[len]);
 		nbr = nbr / 10;
 		len--;
 	}

@@ -32,8 +32,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!sub)
 		return (NULL);
 	if ((size_t)start < s_len)
-    	ft_strlcpy(sub, s + start, sub_len + 1);
+		ft_strlcpy(sub, s + start, sub_len + 1);
 	else
-    	sub[0] = '\0';
+		sub[0] = '\0';
 	return (sub);
 }

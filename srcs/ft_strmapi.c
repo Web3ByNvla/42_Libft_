@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: novella <novella@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 14:58:02 by gunovell          #+#    #+#             */
-/*   Updated: 2026/11/10 15:18:07 by gunovell         ###   ########lyon.fr   */
+/*   Updated: 2026/11/11 22:13:14 by novella          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	while (s[i])
 	{
-		buffer[i] = f(i, &s[i]);
+		buffer[i] = f(i, *(char *)&s[i]);
 		i++;
 	}
 	return (buffer);

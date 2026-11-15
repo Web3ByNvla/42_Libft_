@@ -6,7 +6,7 @@
 /*   By: novella <novella@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 17:33:05 by gunovell          #+#    #+#             */
-/*   Updated: 2026/11/07 13:17:38 by novella          ###   ########lyon.fr   */
+/*   Updated: 2026/11/11 22:04:50 by novella          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_bzero(void *str, size_t n)
 {
-	memset(str, 0, n);
+	ft_memset(str, 0, n);
 }
