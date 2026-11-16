@@ -6,7 +6,7 @@
 /*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 15:58:31 by gunovell          #+#    #+#             */
-/*   Updated: 2026/11/11 16:05:41 by gunovell         ###   ########lyon.fr   */
+/*   Updated: 2026/11/16 10:56:37 by gunovell         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 # define LIBFT_H
 # include <unistd.h>
 # include <stdlib.h>
-# include <limits.h>
+
+# define SIZE_MAX 4294967295
+# define INT_MIN -2147483648
 
 typedef struct s_list
 {
@@ -45,8 +47,12 @@ void	*ft_calloc(size_t nmemb, size_t size);
 void	ft_lsadd_front(t_list **lst, t_list *new);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstclear(t_list **lst, void (*del)(void *));
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list	*ft_lstnew(void *content);
+int		ft_lstsize(t_list *lst);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memset(void *dest, int c, size_t count);

@@ -1,12 +1,10 @@
 NAME = libft.a
-
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar
 ARFLAGS = rcs
-
-INCLUDES = -Iincludes
-SRCS = $(wildcard srcs/*.c)
+INCLUDES = -I.
+SRCS = $(wildcard ft_*.c)
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
@@ -14,7 +12,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
 
-srcs/%.o: srcs/%.c includes/libft.h
+%.o: %.c libft.h
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 clean:

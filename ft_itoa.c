@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: novella <novella@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 15:42:53 by gunovell          #+#    #+#             */
-/*   Updated: 2026/11/15 20:32:35 by novella          ###   ########lyon.fr   */
+/*   Updated: 2026/11/16 10:58:44 by gunovell         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static int	long_len(long nbr)
 	int		len;
 
 	len = 0;
+	if (nbr == 0)
+		return (1);
 	if (nbr < 0)
 	{
 		nbr *= -1;
@@ -43,13 +45,13 @@ char	*ft_itoa(int n)
 		return (NULL);
 	buffer[len] = '\0';
 	len--;
-	if (nbr == 0)
-		buffer[0] = '0';
 	if (nbr < 0)
 	{
 		buffer[0] = '-';
 		nbr *= -1;
 	}
+	if (nbr == 0)
+		buffer[0] = '0';
 	while (len > 0)
 	{
 		buffer[len] = (nbr % 10) + '0';
