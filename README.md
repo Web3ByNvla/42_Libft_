@@ -91,6 +91,8 @@ cc -Wall -Wextra -Werror -I. main.c -L. -lft -o app
   [`malloc(3)`](https://man7.org/linux/man-pages/man3/malloc.3.html), and
   [`write(2)`](https://man7.org/linux/man-pages/man2/write.2.html).
 - cppreference, [C string and memory functions](https://en.cppreference.com/w/c/string/byte.html).
+- The C advanced ebook :
+	https://github.com/MTJailed/C-Programming-Books/blob/master/Advanced%20C.pdf
 
 ### AI usage
 
