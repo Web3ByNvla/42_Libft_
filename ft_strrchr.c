@@ -6,7 +6,7 @@
 /*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 09:14:20 by gunovell          #+#    #+#             */
-/*   Updated: 2026/11/16 12:20:40 by gunovell         ###   ########lyon.fr   */
+/*   Updated: 2026/11/16 13:46:01 by gunovell         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,4 @@ char	*ft_strrchr(const char *s, int c)
 		i--;
 	}
 	return (NULL);
-	
 }
