@@ -6,7 +6,7 @@
 /*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 15:42:53 by gunovell          #+#    #+#             */
-/*   Updated: 2026/11/16 10:58:44 by gunovell         ###   ########lyon.fr   */
+/*   Updated: 2026/11/16 12:03:28 by gunovell         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ static int	long_len(long nbr)
 	}
 	while (nbr > 0)
 	{
-		len++;
 		nbr = nbr / 10;
+		len++;
 	}
 	return (len);
 }
@@ -52,7 +52,7 @@ char	*ft_itoa(int n)
 	}
 	if (nbr == 0)
 		buffer[0] = '0';
-	while (len > 0)
+	while (nbr > 0)
 	{
 		buffer[len] = (nbr % 10) + '0';
 		nbr = nbr / 10;
