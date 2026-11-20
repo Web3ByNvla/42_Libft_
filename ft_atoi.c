@@ -6,13 +6,11 @@
 /*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 14:15:21 by gunovell          #+#    #+#             */
-/*   Updated: 2026/11/09 14:58:56 by gunovell         ###   ########lyon.fr   */
+/*   Updated: 2026/11/20 09:16:57 by gunovell         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 int	ft_atoi(const char *str)
 {

@@ -6,11 +6,9 @@
 /*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 08:25:52 by gunovell          #+#    #+#             */
-/*   Updated: 2026/11/09 08:56:43 by gunovell         ###   ########lyon.fr   */
+/*   Updated: 2026/11/20 09:18:34 by gunovell         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_tolower(int c)
 {

@@ -6,11 +6,9 @@
 /*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 15:37:16 by gunovell          #+#    #+#             */
-/*   Updated: 2026/11/06 16:06:48 by gunovell         ###   ########lyon.fr   */
+/*   Updated: 2026/11/20 09:17:10 by gunovell         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isascii(int c)
 {

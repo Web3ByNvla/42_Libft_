@@ -6,11 +6,9 @@
 /*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 14:49:38 by gunovell          #+#    #+#             */
-/*   Updated: 2026/11/06 16:06:36 by gunovell         ###   ########lyon.fr   */
+/*   Updated: 2026/11/20 09:17:15 by gunovell         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isdigit(int c)
 {

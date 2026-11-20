@@ -6,7 +6,7 @@
 /*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 15:58:31 by gunovell          #+#    #+#             */
-/*   Updated: 2026/11/16 10:56:37 by gunovell         ###   ########lyon.fr   */
+/*   Updated: 2026/11/20 09:18:51 by gunovell         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-# define SIZE_MAX 4294967295
-# define INT_MIN -2147483648
+# define FT_SIZE_MAX 4294967295
+# define FT_INT_MIN -2147483648
 
 typedef struct s_list
 {
