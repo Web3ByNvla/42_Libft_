@@ -6,11 +6,11 @@
 /*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 21:20:47 by novella           #+#    #+#             */
-/*   Updated: 2026/11/11 14:23:27 by gunovell         ###   ########lyon.fr   */
+/*   Updated: 2026/11/24 11:12:02 by gunovell         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
 void	ft_putchar_fd(char c, int fd)
 {

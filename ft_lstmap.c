@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: novella <novella@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 16:25:13 by gunovell          #+#    #+#             */
-/*   Updated: 2026/11/14 14:49:02 by novella          ###   ########lyon.fr   */
+/*   Updated: 2026/11/24 10:43:45 by gunovell         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

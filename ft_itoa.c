@@ -6,11 +6,11 @@
 /*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 15:42:53 by gunovell          #+#    #+#             */
-/*   Updated: 2026/11/16 12:03:28 by gunovell         ###   ########lyon.fr   */
+/*   Updated: 2026/11/24 10:43:45 by gunovell         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 static int	long_len(long nbr)
 {

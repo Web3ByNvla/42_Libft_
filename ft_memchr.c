@@ -6,7 +6,7 @@
 /*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 09:55:36 by gunovell          #+#    #+#             */
-/*   Updated: 2026/11/09 10:09:03 by gunovell         ###   ########lyon.fr   */
+/*   Updated: 2026/11/24 11:16:21 by gunovell         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (src[i] == (unsigned char)c)
-			return ((void *)s + i);
+			return ((void *)&s[i]);
 		i++;
 	}
 	return (NULL);

@@ -6,7 +6,7 @@
 /*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 08:33:51 by gunovell          #+#    #+#             */
-/*   Updated: 2026/11/11 10:44:59 by gunovell         ###   ########lyon.fr   */
+/*   Updated: 2026/11/24 11:58:01 by gunovell         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1 || !set)
 		return (NULL);
 	start = 0;
-	end = ft_strlen(s1) - 1;
+	if (ft_strlen(s1) >= 1)
+		end = ft_strlen(s1) - 1;
+	else
+		end = -1;
 	while (is_charset(s1[start], set) && s1[start] != '\0')
 		start++;
 	while (end >= 0 && is_charset(s1[end], set))

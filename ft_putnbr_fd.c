@@ -6,15 +6,16 @@
 /*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 21:38:14 by novella           #+#    #+#             */
-/*   Updated: 2026/11/20 09:19:23 by gunovell         ###   ########lyon.fr   */
+/*   Updated: 2026/11/24 11:18:48 by gunovell         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n == FT_INT_MIN)
+	if (n == INT_MIN)
 	{
 		ft_putstr_fd("-2147483648", fd);
 		return ;

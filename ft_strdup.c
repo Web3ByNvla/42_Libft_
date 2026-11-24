@@ -6,11 +6,12 @@
 /*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 16:12:08 by gunovell          #+#    #+#             */
-/*   Updated: 2026/11/09 16:21:27 by gunovell         ###   ########lyon.fr   */
+/*   Updated: 2026/11/24 11:11:40 by gunovell         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strdup(const char *s)
 {

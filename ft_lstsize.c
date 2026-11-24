@@ -6,15 +6,15 @@
 /*   By: gunovell <gunovell@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 12:21:44 by gunovell          #+#    #+#             */
-/*   Updated: 2026/11/16 10:56:37 by gunovell         ###   ########lyon.fr   */
+/*   Updated: 2026/11/24 10:45:31 by gunovell         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+unsigned int	ft_lstsize(t_list *lst)
 {
-	int				count_lst;
+	unsigned int		count_lst;
 
 	if (!lst)
 		return (0);
