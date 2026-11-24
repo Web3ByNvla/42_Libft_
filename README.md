@@ -23,7 +23,7 @@ and the `t_list` linked-list type are provided in `libft.h`.
   `ft_strjoin`, `ft_strtrim`, and `ft_split`.
 - **String transformations:** `ft_atoi`, `ft_itoa`, `ft_strmapi`, and
   `ft_striteri`.
-- **Linked lists:** `ft_lstnew`, `ft_lsadd_front`, `ft_lstadd_back`,
+- **Linked lists:** `ft_lstnew`, `ft_lstadd_front`, `ft_lstadd_back`,
   `ft_lstsize`, `ft_lstlast`, `ft_lstdelone`, `ft_lstclear`, `ft_lstiter`,
   and `ft_lstmap`. These functions use `t_list`, a singly linked list whose
   nodes store a `void *` content pointer and a pointer to the next node.
@@ -98,4 +98,4 @@ cc -Wall -Wextra -Werror -I. main.c -L. -lft -o app
 
 AI assistance was used to review the project documentation requirements and help
 adapt the test build configuration to the repository's flat source layout. It
-also help to creat the README file. 
+also help to creat the README file.
